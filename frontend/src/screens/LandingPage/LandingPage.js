@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import './LandingPage.css'
+import Button from 'react-bootstrap/Button';
 
 const LandingPage = () => {
   return (
@@ -12,6 +13,11 @@ const LandingPage = () => {
             <div>
               <h1 className='title'>Welcome to NoteKrator</h1>
               <p className='subtitle'>One safe place for all your notes.</p>
+            </div>
+            <div className='buttonContainer'>
+              <a href='/login'>
+                <Button>Login</Button>
+              </a>
             </div>
           </div>
         </Row>
