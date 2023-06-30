@@ -24,7 +24,7 @@ const Header = () => {
             <Button variant="dark">Search</Button>
             </Form>
             </Nav>
-          <Nav className="me-auto">
+          <Nav>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
