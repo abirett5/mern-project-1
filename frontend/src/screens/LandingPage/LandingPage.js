@@ -8,7 +8,12 @@ const LandingPage = () => {
     <div className='main'>
       <Container>
         <Row>
-          Landing
+          <div className='intro-text'>
+            <div>
+              <h1 className='title'>Welcome to NoteKrator</h1>
+              <p className='subtitle'>One safe place for all your notes.</p>
+            </div>
+          </div>
         </Row>
       </Container>
     </div>
