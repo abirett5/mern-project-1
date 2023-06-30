@@ -20,3 +20,14 @@
     width: 100%;
     text-align: center;
 }
+
+.buttonContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.landingButton {
+    width: 200px;
+    height: 55px;
+}
