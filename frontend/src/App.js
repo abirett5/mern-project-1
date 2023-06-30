@@ -6,8 +6,9 @@ import LandingPage from './screens/LandingPage/LandingPage';
 const App = () => (
     <>
     <Header />
-    <main style={{minHeight:"93vh"}}></main>
-    <LandingPage />
+    <main>
+        <LandingPage />
+    </main>
 
     <Footer />
     </>
