@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import './LandingPage.css'
 
 const LandingPage = () => {
   return (
-    <div>Landing</div>
+    <div className='main'>
+      <Container>
+        <Row>
+          Landing
+        </Row>
+      </Container>
+    </div>
   )
 }
 
