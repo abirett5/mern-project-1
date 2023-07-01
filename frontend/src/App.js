@@ -9,7 +9,7 @@ const App = () => (
     <BrowserRouter>
     <Header />
     <main>
-        <Route path='/' Component={LandingPage}/>
+        <Route path='/' Component={LandingPage} exact/>
         <Route path='/mynotes' Component={()=><MyNotes />}/>
     </main>
 
