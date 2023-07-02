@@ -1,6 +1,7 @@
-import React from 'react'
-import Container from 'react-bootstrap/esm/Container'
-import Row from 'react-bootstrap/esm/Row'
+import React from 'react';
+import Container from 'react-bootstrap/esm/Container';
+import Row from 'react-bootstrap/esm/Row';
+import './MainScreen.css';
 
 const MainScreen = ({ title, children }) => {
   return (
@@ -16,7 +17,7 @@ const MainScreen = ({ title, children }) => {
                             </>
                         )
                     }
-                    
+
                     { children }
                 </div>
             </Row>
