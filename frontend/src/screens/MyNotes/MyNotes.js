@@ -19,12 +19,13 @@ const MyNotes = () => {
               alignSelf: "center",
               fontSize: 18,
               }}
-              >Title</span>
+            >Title</span>
+            
+            <div>
+              <Button>Edit</Button>
+              <Button variant='danger' className='mx-2'>Delete</Button>
+            </div>
           </Card.Header>
-          <div>
-            <Button>Edit</Button>
-            <Button variant='danger' className='mx-2'>Delete</Button>
-          </div>
         </Card>
       </Link>
     </MainScreen>
