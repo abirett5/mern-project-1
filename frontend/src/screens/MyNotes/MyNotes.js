@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/Card';
 import notes from "../../data/notes";
+import Badge from 'react-bootstrap/Badge';
 
 const MyNotes = () => {
   const deleteHandler = (id) => {
@@ -42,6 +43,9 @@ const MyNotes = () => {
               </div>
             </Card.Header>
             <Card.Body>
+              <h4>
+                <Badge variant='success'>Category - {note.category}</Badge>
+              </h4>
               <blockquote className="blockquote mb-0">
                 <p>
                   {note.content}
