@@ -16,6 +16,7 @@ const MyNotes = () => {
     <MainScreen title='Welcome back Ashfaque Hossain Abir...'>
       <Link to='createnote'>
         <Button style={{marginLeft:10, marginBottom:6}} size='lg'>Create New Note</Button>
+      </Link>
         {
           notes.map(note => (
           <Card style={{ margin: 10 }}>
@@ -54,7 +55,6 @@ const MyNotes = () => {
             </Card>
           ))
         }
-      </Link>
     </MainScreen>
   )
 }
