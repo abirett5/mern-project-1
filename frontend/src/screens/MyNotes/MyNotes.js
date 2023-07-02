@@ -1,11 +1,9 @@
 import React from 'react';
+import MainScreen from '../../components/MainScreen';
 
 const MyNotes = () => {
   return (
-    <div>
-      <h1>My Notes</h1>
-      <p>Welcome Here</p>
-    </div>
+    <MainScreen title='Welcome back Ashfaque Hossain Abir...'>My Notes</MainScreen>
   )
 }
 
