@@ -9,9 +9,17 @@ const MyNotes = () => {
     <MainScreen title='Welcome back Ashfaque Hossain Abir...'>
       <Link to='createnote'>
         <Button style={{marginLeft:10, marginBottom:6}} size='lg'>Create New Note</Button>
-        <Card>
-          <Card.Header>
-            <span>Title</span>
+        <Card style={{ margin: 10 }}>
+          <Card.Header style={{ display: "flex" }}>
+            <span style={{ 
+              color: "black",
+              textDecoration: "none",
+              flex: 1,
+              cursor: "pointer",
+              alignSelf: "center",
+              fontSize: 18,
+              }}
+              >Title</span>
           </Card.Header>
           <div>
             <Button>Edit</Button>
