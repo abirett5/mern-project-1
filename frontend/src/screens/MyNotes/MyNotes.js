@@ -10,12 +10,12 @@ import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
 function CustomToggle({ children, eventKey }) {
   const decoratedOnClick = useAccordionButton(eventKey, () =>
-    console.log('totally custom!'),
+    console.log('Note Opened!'),
   );
 
   return (
     <button
-      style={{ backgroundColor: 'transparent' }}
+      style={{ backgroundColor: 'transparent', cursor: 'pointer' }}
       onClick={decoratedOnClick}
     >
       {children}
@@ -44,7 +44,6 @@ const MyNotes = () => {
                 color: "black",
                 textDecoration: "none",
                 flex: 1,
-                cursor: "pointer",
                 alignSelf: "center",
                 fontSize: 18,
               }}
