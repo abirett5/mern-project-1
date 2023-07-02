@@ -6,6 +6,8 @@ import Card from 'react-bootstrap/Card';
 import notes from "../../data/notes";
 import Badge from 'react-bootstrap/Badge';
 import Accordion from 'react-bootstrap/Accordion';
+import AccordionHeader from 'react-bootstrap/AccordionHeader';
+import AccordionCollapse from 'react-bootstrap/AccordionCollapse';
 
 const MyNotes = () => {
   const deleteHandler = (id) => {
@@ -32,7 +34,7 @@ const MyNotes = () => {
                 alignSelf: "center",
                 fontSize: 18,
               }}
-              ><Accordion.Toggle as={Card.Text} variant='link' eventKey='0'>{note.title}</Accordion.Toggle>
+              ><AccordionHeader as={Card.Text} variant='link' eventKey='0'>{note.title}</AccordionHeader>
               </span>
               
               <div>
@@ -45,7 +47,7 @@ const MyNotes = () => {
                 </Button>
               </div>
             </Card.Header>
-            <Accordion.Collapse eventKey='0'>
+            <AccordionCollapse eventKey='0'>
             <Card.Body>
               <h4>
                 <Badge style={{backgroundColor: "#28a745", color: "white"}}>Category - {note.category}</Badge>
@@ -58,7 +60,7 @@ const MyNotes = () => {
                 <footer className="blockquote-footer">Created On - date</footer>
               </blockquote>
             </Card.Body>
-            </Accordion.Collapse>
+            </AccordionCollapse>
             </Card>
           </Accordion>
           ))
