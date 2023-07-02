@@ -5,6 +5,23 @@ import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/Card';
 import notes from "../../data/notes";
 import Badge from 'react-bootstrap/Badge';
+import Accordion from 'react-bootstrap/Accordion';
+import { useAccordionButton } from 'react-bootstrap/AccordionButton';
+
+function CustomToggle({ children, eventKey }) {
+  const decoratedOnClick = useAccordionButton(eventKey, () =>
+    console.log('totally custom!'),
+  );
+
+  return (
+    <button
+      style={{ backgroundColor: 'transparent' }}
+      onClick={decoratedOnClick}
+    >
+      {children}
+    </button>
+  );
+}
 
 const MyNotes = () => {
   const deleteHandler = (id) => {
@@ -20,7 +37,8 @@ const MyNotes = () => {
       </Link>
         {
           notes.map(note => (
-          <Card style={{ margin: 10 }}>
+          <Accordion>
+            <Card style={{ margin: 10 }}>
             <Card.Header style={{ display: "flex" }}>
               <span style={{ 
                 color: "black",
@@ -30,7 +48,8 @@ const MyNotes = () => {
                 alignSelf: "center",
                 fontSize: 18,
               }}
-              >{note.title}</span>
+              ><CustomToggle as={Card.Text} variant='link' eventKey='0'>{note.title}</CustomToggle>
+              </span>
               
               <div>
                 <Button href={`/note/${note._id}`}>Edit</Button>
@@ -42,10 +61,12 @@ const MyNotes = () => {
                 </Button>
               </div>
             </Card.Header>
+            <Accordion.Collapse eventKey='0'>
             <Card.Body>
               <h4>
                 <Badge style={{backgroundColor: "#28a745", color: "white"}}>Category - {note.category}</Badge>
               </h4>
+
               <blockquote className="blockquote mb-0">
                 <p>
                   {note.content}
@@ -53,7 +74,9 @@ const MyNotes = () => {
                 <footer className="blockquote-footer">Created On - date</footer>
               </blockquote>
             </Card.Body>
+            </Accordion.Collapse>
             </Card>
+          </Accordion>
           ))
         }
     </MainScreen>
