@@ -44,12 +44,9 @@ const MyNotes = () => {
             <Card.Body>
               <blockquote className="blockquote mb-0">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                  posuere erat a ante.{' '}
-                  </p>
-                  <footer className="blockquote-footer">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                  </footer>
+                  {note.content}
+                </p>
+                <footer className="blockquote-footer">Created On - date</footer>
               </blockquote>
             </Card.Body>
             </Card>
