@@ -44,7 +44,7 @@ const MyNotes = () => {
             </Card.Header>
             <Card.Body>
               <h4>
-                <Badge variant="success">Category - {note.category}</Badge>
+                <Badge style={{backgroundColor: "28a745", color: "white"}}>Category - {note.category}</Badge>
               </h4>
               <blockquote className="blockquote mb-0">
                 <p>
