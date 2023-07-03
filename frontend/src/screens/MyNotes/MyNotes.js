@@ -25,20 +25,29 @@ function CustomToggle({ children, eventKey }) {
 }
 
 const MyNotes = () => {
+  const [notes, setNotes] = useState([]); // For Backend Purposes
+
   const deleteHandler = (id) => {
     if(window.confirm("Are you sure?")) {
 
     }
   }
 
+  //-----------------------------------------------
+  //=== Connecting to Backend to get data from api
+
   const fetchNotes = async() => {
     const { data } = await axios.get('/api/notes');
-    console.log(data);
+    setNotes(data);
   }
+
+  console.log(notes);
 
   useEffect(() => {
     fetchNotes();
   }, [])
+
+  //-----------------------------------------------
   
 
   return (
