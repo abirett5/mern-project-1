@@ -32,7 +32,7 @@ const MyNotes = () => {
   }
 
   const fetchNotes = async() => {
-    const data = await axios.get('/api/notes');
+    const { data } = await axios.get('https://mern-project-1.onrender.com/api/notes');
     console.log(data);
   }
 
