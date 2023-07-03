@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MainScreen from '../../components/MainScreen';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/esm/Button';
@@ -7,6 +7,7 @@ import notes from "../../data/notes";
 import Badge from 'react-bootstrap/Badge';
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
+import axios from 'axios';
 
 function CustomToggle({ children, eventKey }) {
   const decoratedOnClick = useAccordionButton(eventKey, () =>
@@ -29,6 +30,16 @@ const MyNotes = () => {
 
     }
   }
+
+  const fetchNotes = async() => {
+    const data = await axios.get('https://mern-project-1.onrender.com/api/notes');
+    console.log(data);
+  }
+
+  useEffect(() => {
+    fetchNotes();
+  }, [])
+  
 
   return (
     <MainScreen title='Welcome back Ashfaque Hossain Abir...'>
