@@ -61,4 +61,7 @@
     height: 45px;
     padding: 12px 24px;
   }
+  .buttonContainer {
+    padding: 0 150px;
+  }
 }
