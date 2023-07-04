@@ -16,10 +16,10 @@ const LandingPage = () => {
             </div>
             <div className='buttonContainer'>
               <a href='/login'>
-                <Button className='landingButton mr-3'>Login</Button>
+                <Button className='loginButton'>Login</Button>
               </a>
               <a href='/register'>
-                <Button className='landingButton' variant='outline-primary'>Signup</Button>
+                <Button className='registerButton' variant='outline-primary'>Signup</Button>
               </a>
             </div>
           </div>

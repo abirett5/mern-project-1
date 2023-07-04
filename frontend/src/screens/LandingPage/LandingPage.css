@@ -30,7 +30,12 @@
   justify-content: space-evenly;
 }
 
-.landingButton {
+.loginButton {
+  width: 200px;
+  height: 55px;
+}
+
+.registerButton {
   width: 200px;
   height: 55px;
 }
@@ -43,11 +48,21 @@
       font-size: 60px;
       font-weight: 500;
     }
-  .landingbutton {
-    width: 80px;
-    height: 50px;
+  .loginButton {
+    font-size: 12px;
+    width: 50px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  .registerButton {
+    font-size: 12px;
+    width: 50px;
+    height: 20px;
   }
   .buttonContainer {
-    padding: 0;
+    margin-top: 50px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
   }
 }
